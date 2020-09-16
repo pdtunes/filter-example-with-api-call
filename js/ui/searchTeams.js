@@ -3,7 +3,7 @@ import { renderTeams } from "./renderTeams.js";
 export function searchTeams(teams) {
     const search = document.querySelector(".search");
 
-    search.onkeyup = function () {
+    search.onkeyup = function (event) {
         // console.log(event);
 
         const searchValue = event.target.value.trim().toLowerCase();
