@@ -3,7 +3,7 @@ import { renderTeams } from "./ui/renderTeams.js";
 import { searchTeams } from "./ui/searchTeams.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
-const url = "https://cors-anywhere.herokuapp.com/https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/nbateams";
+const url = "https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/nbateams";
 
 async function getTeams() {
     try {
