@@ -1,0 +1,26 @@
+{
+  "name": "filter-example-with-api-call",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoroffFEU/filter-example-with-api-call.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoroffFEU/filter-example-with-api-call/issues"
+  },
+  "homepage": "https://github.com/NoroffFEU/filter-example-with-api-call#readme",
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

@@ -1,25 +1,24 @@
-import teams from "./data/teams.js";
+import axios from "axios";
 import { renderTeams } from "./ui/renderTeams.js";
 import { searchTeams } from "./ui/searchTeams.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
-const url = "https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/nbateams";
+const url =
+  "https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/nbateams";
 
 async function getTeams() {
-    try {
-        const response = await fetch(url);
-        const json = await response.json();
+  try {
+    const response = await axios.get(url);
+    const { data } = response.data;
 
-        console.log(json.data);
+    console.log(data);
 
-        const teams = json.data;
-
-        renderTeams(teams);
-        searchTeams(teams);
-    } catch (error) {
-        console.log(error);
-        displayMessage("error", error, ".team-container");
-    }
+    renderTeams(data);
+    searchTeams(data);
+  } catch (error) {
+    console.log(error);
+    displayMessage("error", error, ".team-container");
+  }
 }
 
 getTeams();
